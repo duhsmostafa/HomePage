@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Example</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container Home-content" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <div class="lets-btn">
+            <button class="Home-content btn2">Lets Connect</button>
+          </div>
+          <div class="clear"></div>
+
+    </div>
+    <h4 class="Home-content text">Connecting people and simplifying financial management
+        <br>
+        __experience seamless technology with UltraTech Plus! 
+    </h4>
+    <button class="Home-content btn">PeeK Inside</button>
+
+
+
+        <div id="animation"></div>
+
+    
+<script>
+var animation = lottie.loadAnimation({
+    container: document.getElementById('animation'), 
+    renderer: 'svg', 
+    loop: false, 
+    autoplay: true, 
+    path: "https://raw.githubusercontent.com/duhsmostafa/Lottie-file/main/website_intro%20first%20file.json" // Example link
+});
+    setTimeout(function() {
+        document.querySelectorAll('.Home-content').forEach(function(element) {
+            element.classList.add('show-content');
+        });
+    }, 6000); 
+</script>
+
+</body>
+</html>
